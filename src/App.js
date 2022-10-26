@@ -1,5 +1,6 @@
 import React from 'react';
-import ExpenseItem from './components/ExpenseItem'
+import Expenses from './components/Expenses/Expenses'
+import NewExpense from './components/NewExpense/NewExpense'
 
 function App() {
   const expenses = [
@@ -24,30 +25,10 @@ function App() {
     },
   ];
 
-  const expensesArray = expenses.map((expense) =>
-    <ExpenseItem 
-      key={expense.id}
-      title={expense.title} 
-      date={expense.date} 
-      amount={expense.amount}
-    ></ExpenseItem>
-  );
-
-  // expenses.forEach( expense => {
-  //   expensesArray.push(
-  //     <ExpenseItem 
-  //       title={expense.title} 
-  //       date={expense.date} 
-  //       amount={expense.amount}
-  //     ></ExpenseItem>
-  //   )
-  // })
-
   return (
     <div>
-      <h2>Hello world</h2>
-      <p>This is also visible!</p>
-      { expensesArray }
+      <NewExpense />
+      <Expenses expenses={expenses}></Expenses>
     </div>
   );
 }
