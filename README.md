@@ -1,3 +1,6 @@
+to create new project: 
+npx create-reatc-app my-app
+
 npm install - to install packages 
 or yarn install 
 
